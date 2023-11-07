@@ -1,7 +1,7 @@
 const a = "baab";
 
-function stringresult() {
-  const b = a.substring();
+function stringresult(result) {
+  const b = result.substring();
   let temp = "";
 
   for (let i = 0; i < b.length; i++) {

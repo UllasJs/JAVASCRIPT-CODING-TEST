@@ -1,7 +1,7 @@
-const min = 1;
-const max = 10;
+const a = 1;
+const b = 10;
 
-function fun() {
+function fun(min, max) {
   var array = [];
 
   for (let i = min; i <= max; i++) {

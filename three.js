@@ -1,8 +1,8 @@
-const a = 1283019238;
+const a = 231;
 
-function digitsArray() {
+function digitsArray(result) {
   var digits = [];
-  digits = a.toString().split("");
+  digits = result.toString().split("");
 
   console.log(digits);
 }

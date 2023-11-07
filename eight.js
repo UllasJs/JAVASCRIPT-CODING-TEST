@@ -4,16 +4,21 @@ const firstobj = {
   e: "",
 };
 const secondobj = {
+  b: "de",
   c: "d",
   e: "G",
 };
 
 function propertycheck() {
-  if (secondobj.d == null) {
+  if (secondobj.b) {
+    secondobj.d = secondobj.b;
+  } else if (secondobj.d == undefined) {
     secondobj.d = "d";
+  } else {
+    console.log(secondobj)
   }
   const merged = Object.assign({}, firstobj, secondobj);
-  
+
   console.log(merged);
 }
 

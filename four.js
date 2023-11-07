@@ -1,18 +1,18 @@
 const ArrayofStrings = ["ball", "apple", "cat", "elen", "dog"];
 
-function sortArray() {
+function sortArray(result) {
   var temp = "";
 
-  for (let i = 0; i <= ArrayofStrings.length; i++) {
+  for (let i = 0; i <= result.length; i++) {
     for (let j = 0; j <= i; j++) {
-      if (ArrayofStrings[i] < ArrayofStrings[j]) {
-        temp = ArrayofStrings[i];
-        ArrayofStrings[i] = ArrayofStrings[j];
-        ArrayofStrings[j] = temp;
+      if (result[i] < result[j]) {
+        temp = result[i];
+        result[i] = result[j];
+        result[j] = temp;
       }
     }
   }
-  console.log(ArrayofStrings);
+  console.log(result);
 }
 
 sortArray(ArrayofStrings)

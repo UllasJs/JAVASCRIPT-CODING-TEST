@@ -1,14 +1,16 @@
-const a = {
-  // b: {
-  //   name: "Apple",
-  //   color: "red",     // when b object is commented out the function gives "undefined" output
-  // },
-  name: "Cat",
-};
+const myobj = {
+  a: {
+    b: "This is a B",
 
-function CheckProperty() {
-  console.log(a.b);
-  console.log(a)
+  }
 }
 
-CheckProperty(a);
+function CheckProperty() {
+  if (myobj.hasOwnProperty("b")) {
+    
+  } else {
+    console.log(undefined);
+  }
+}
+
+CheckProperty(myobj);

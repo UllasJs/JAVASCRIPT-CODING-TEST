@@ -1,5 +1,5 @@
-const Array = [1, 20, 23, 5, 15, 100];
-const number = 15;
+const Array = [10,30,15,1000];
+const number = 16;
 
 function greaterthan() {
   let sum = 0;
