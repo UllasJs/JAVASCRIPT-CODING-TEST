@@ -1,21 +1,32 @@
 const firstobj = {
+  name: "ullas",
   a: "1",
   b: "2",
   d: 2,
   e: "",
 };
 const secondobj = {
+  a: 123,
   b: 12,
   c: "d",
   e: "G",
 };
 
 function propertycheck(one, two) {
-  two.d = two.b;
-  delete two.b;
+  const merger = {...one,...two}
+  for (const keyone in one) {
+    merger[keyone] = one[keyone]
+  }
+  for (const key in two) {
+    if (one.hasOwnProperty(key) == two.hasOwnProperty(key)) {
+      let newkey = key + '1';
+      merger[newkey] = two[key];
+    }
+  }
 
-  const merged = Object.assign({}, one, two);
-  console.log(merged);
+  // const merged = Object.assign({}, one, two);
+  return merger;
 }
 
-propertycheck(firstobj, secondobj);
+const result = propertycheck(firstobj, secondobj);
+console.log(result);
