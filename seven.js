@@ -1,16 +1,21 @@
 const myobj = {
   a: {
-    b: "This is a B",
+    b: {
+      a: "google"
+    }
+  },
+  d: "a"
+};
 
+function CheckProperty(obj) {
+  if (obj && obj.hasOwnProperty("a")) {
+    if (typeof obj.a === "object" && obj.a.hasOwnProperty("b")) {
+      return obj.a.b;
+    }
   }
+  return undefined;
 }
 
-function CheckProperty() {
-  if (myobj.hasOwnProperty("b")) {
-    
-  } else {
-    console.log(undefined);
-  }
-}
+const result = CheckProperty(myobj);
 
-CheckProperty(myobj);
+console.log(result)

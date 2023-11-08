@@ -1,24 +1,20 @@
 const firstobj = {
   a: "1",
   b: "2",
+  d: 2,
   e: "",
 };
 const secondobj = {
-  b: "de",
+  b: 12,
   c: "d",
   e: "G",
 };
 
-function propertycheck() {
-  if (secondobj.b) {
-    secondobj.d = secondobj.b;
-  } else if (secondobj.d == undefined) {
-    secondobj.d = "d";
-  } else {
-    console.log(secondobj)
-  }
-  const merged = Object.assign({}, firstobj, secondobj);
+function propertycheck(one, two) {
+  two.d = two.b;
+  delete two.b;
 
+  const merged = Object.assign({}, one, two);
   console.log(merged);
 }
 
